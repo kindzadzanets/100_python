@@ -4,3 +4,8 @@ Main branch renamed to "master".
 Made local changes.
 
 Conflict changes from origin
+
+
+2nd try:
+Conflict changes from master
+
