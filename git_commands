@@ -1,0 +1,33 @@
+git commit - create a commit with lost added uncomited changes
+	-m - add the commit message ""
+	-a - add and commit all changed trcked files  in one time
+	-- amend - just add changes in last commit's info or => git add - for adding new other changes 
+in current commit.
+
+git add - add an untracked or changed files (add to git system)
+
+git reset HEAD~[1](2,3,4...) - disassembling(deleting) of last [1] or several  commits in current 
+branch
+	--hard - disassembling last commit(s) and full deleting of changes corespoded to this commit
+
+git diff - shows all last uncommited changes
+
+git status - shows current state of local git repository
+
+git push - upload local commited changes to origin branch on server
+
+git pull - download actual version of remote origin branch to local master branch
+
+git fetch - receive info about current state of remote origin branch (dont use before push - can 
+change commit's hash)
+
+git merge - merge changes into current branch
+	--abort - for merge's canceling
+ 
+git log - info about all  commits for current version repository
+	--author [author's name] - filter by author
+
+git show [commit's hash] - full info about commit and coresponed changes.
+
+git blame - show files's rows changes 
+	| grep [any parametr] - filter by..
