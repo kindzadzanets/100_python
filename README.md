@@ -8,3 +8,7 @@ Conflict changes from master
 
 2nd try:
 Conflict from origin
+
+usfull commands list:
+
+git diff - shows all uncommited  changes
