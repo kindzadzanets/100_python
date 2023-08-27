@@ -16,6 +16,10 @@ git diff - shows all last uncommited changes
 git status - shows current state of local git repository
 
 git push - upload local commited changes to origin branch on server
+	-u origin(or other remote_branch_name) [local_branch_name] - same 
+as "--set ustream [remote_branch_name] [local_branch_name]". links current new_local_branch to a branch 
+on the server. необходимо для того, что бы сервер увидел свежую локальную 
+ветку.
 
 git pull - download actual version of remote origin branch to local master branch
 
@@ -41,3 +45,8 @@ git stash - save+hide last uncommited changes
 	clear - erase hided+saved changes
 
 git apply [file_name] - apply patch from file
+
+git branch - show branches list with marked  current brunch
+	[new_branch_name] - create new branch
+
+git switch [branch_name] - set the [branch_name] as current
