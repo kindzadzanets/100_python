@@ -41,3 +41,4 @@ git stash - save+hide last uncommited changes
 	clear - erase hided+saved changes
 
 git apply [file_name] - apply patch from file
+string in first_branch
