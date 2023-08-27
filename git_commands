@@ -11,6 +11,7 @@ branch
 	--hard - disassembling last commit(s) and full deleting of changes corespoded to this commit
 
 git diff - shows all last uncommited changes
+	>> [name].patch - add command result to a new patch file
 
 git status - shows current state of local git repository
 
@@ -38,3 +39,5 @@ changes for file [name] or for hole  directory [.]
 git stash - save+hide last uncommited changes
 	pop - restore hided changes
 	clear - erase hided+saved changes
+
+git apply [file_name] - apply patch from file
