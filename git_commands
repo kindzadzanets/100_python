@@ -17,9 +17,9 @@ git status - shows current state of local git repository
 
 git push - upload local commited changes to origin branch on server
 	-u origin(or other remote_branch_name) [local_branch_name] - same 
-as "--set ustream [remote_branch_name] [local_branch_name]". links current new_local_branch to a branch 
-on the server. необходимо для того, что бы сервер увидел свежую локальную 
-ветку.
+as "--set ustream [remote_branch_name] [local_branch_name]". Creates same branch on server and links 
+current new_local_branch to a new_remote_branch on the server. Создаётся ветка на сервере и ассоциация 
+текущей новой ветки с ней.
 
 git pull - download actual version of remote origin branch to local master branch
 
