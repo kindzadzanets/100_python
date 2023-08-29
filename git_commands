@@ -1,6 +1,6 @@
 git commit - create a commit with lost added uncomited changes
 	-m - add the commit message ""
-	-a - add and commit all changed trcked files  in one time
+	-a - add and commit all changed tracked files in one time
 	-- amend - just add changes in last commit's info or => git add - for adding new other changes 
 in current commit.
 
@@ -26,7 +26,7 @@ git pull - download actual version of remote origin branch to local master branc
 git fetch - receive info about current state of remote origin branch (dont use before push - can 
 change commit's hash)
 
-git merge - merge changes into current branch
+git merge [other_branch_name] - merge other branch into a current branch
 	--abort - for merge's canceling
  
 git log - info about all  commits for current version repository
@@ -50,3 +50,4 @@ git branch - show branches list with marked  current brunch
 	[new_branch_name] - create new branch
 
 git switch [branch_name] - set the [branch_name] as current
+
