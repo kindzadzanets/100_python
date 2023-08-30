@@ -11,6 +11,7 @@ git reset HEAD~[1](2,3,4...) - disassembling(deleting) of last [1] or several  c
 branch.
 	--hard - disassembling last commit(s) and full deleting of changes corespoded to this commit.
 	HEAD [file_name] - set a file as untracked.
+	HEAD [.] - untrack all last added files.
 
 git diff - shows all last uncommited changes in branch.
 	>> [name].patch - add command result to a new patch file.
@@ -59,3 +60,4 @@ git branch - show branches list with marked  current brunch.
 
 git switch [branch_name] - set the [branch_name] as current.
 
+git clean -f - delete all untracked files in the directory.
