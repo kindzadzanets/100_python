@@ -10,7 +10,7 @@ git reset HEAD~[1](2,3,4...) - disassembling(deleting) of last [1] or several  c
 branch
 	--hard - disassembling last commit(s) and full deleting of changes corespoded to this commit
 
-git diff - shows all last uncommited changes
+git diff - shows all last uncommited changes in branch
 	>> [name].patch - add command result to a new patch file
 
 git status - shows current state of local git repository
@@ -20,8 +20,9 @@ git push - upload local commited changes to origin branch on server
 as "--set ustream [remote_branch_name] [local_branch_name]". Creates same branch on server and links 
 current new_local_branch to a new_remote_branch on the server. Создаётся ветка на сервере и ассоциация 
 текущей новой ветки с ней.
+	origin: [remote_branch_name] - удаление ветки на сервере
 
-git pull - download actual version of remote origin branch to local master branch
+git pull - download and merge actual version of remote origin branch to local branch
 
 git fetch - receive info about current state of remote origin branch (dont use before push - can 
 change commit's hash)
@@ -32,7 +33,8 @@ git merge [other_branch_name] - merge other branch into a current branch
 git log - info about all  commits for current version repository
 	--author [author's name] - filter by author
 
-git show [commit's hash] - full info about commit and coresponed changes.
+git show - show full info of last commit 
+	[commit's hash] - full info about commit and coresponed changes.
 
 git blame - show files's rows changes 
 	| grep [any parametr] - filter by..
@@ -48,6 +50,7 @@ git apply [file_name] - apply patch from file
 
 git branch - show branches list with marked  current brunch
 	[new_branch_name] - create new branch
+	-m [branch_name] [new_name] - branch rename
 
 git switch [branch_name] - set the [branch_name] as current
 
