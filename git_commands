@@ -61,3 +61,5 @@ git branch - show branches list with marked  current brunch.
 git switch [branch_name] - set the [branch_name] as current.
 
 git clean -f - delete all untracked files in the directory.
+
+git reflog - show short-info full table of actions.
