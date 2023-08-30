@@ -27,6 +27,8 @@ git pull - download and merge actual version of remote origin branch to local br
 
 git fetch - receive info about current state of remote origin branch (dont use before push - can 
 change commit's hash)
+	origin [remote_branch_name]- download remote branch from server to local repository. For displaying 
+new dowloaded branch into the list, use git switch to that branch.
 
 git merge [other_branch_name] - merge other branch into a current branch
 	--abort - for merge's canceling
