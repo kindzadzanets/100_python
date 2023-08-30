@@ -1,5 +1,5 @@
 git commit - create a commit with lost added uncomited changes
-	-m - add the commit message ""
+	-m "" - add the "commit message"
 	-a - add and commit all changed tracked files in one time
 	-- amend - just add changes in last commit's info or => git add - for adding new other changes 
 in current commit.
@@ -20,9 +20,10 @@ git push - upload local commited changes to origin branch on server
 as "--set ustream [remote_branch_name] [local_branch_name]". Creates same branch on server and links 
 current new_local_branch to a new_remote_branch on the server. Создаётся ветка на сервере и ассоциация 
 текущей новой ветки с ней.
-	origin: [remote_branch_name] - удаление ветки на сервере
+	origin :[remote_branch_name] - delete remote branch from server
 
 git pull - download and merge actual version of remote origin branch to local branch
+	origin :[remote_branch_name] - download remote branch from server to a local repository
 
 git fetch - receive info about current state of remote origin branch (dont use before push - can 
 change commit's hash)
