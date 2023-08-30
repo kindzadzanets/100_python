@@ -26,7 +26,7 @@ current new_local_branch to a new_remote_branch on the server. Создаётс�
 	origin :[remote_branch_name] - delete remote branch from server.
 
 git pull - download and merge actual version of remote origin branch to local branch.
-	origin :[remote_branch_name] - download remote branch from server to a local repository.
+	origin :[remote_branch_name] - ???NEED TO RESEARCH??.
 
 git fetch - receive info about current state of remote origin branch (dont use before push - can 
 change commit's hash).
