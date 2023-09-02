@@ -64,3 +64,9 @@ git switch [branch_name] - set the [branch_name] as current.
 git clean -f - delete all untracked files in the directory.
 
 git reflog - show short-info full table of actions.
+
+git grep [string] - search in hole project.
+	-c - count of results.
+	-e [string] -e [string] - search several values.
+	-i - case-insensitive search (независимо от регистра). 
+	-n - result + file's string number.
