@@ -22,3 +22,13 @@ for score in student_scores:
         highest_score = score
 # отобразится последнее значение highest_score, присвоенное в результате удовлетворения условия из цикла.
 print(f"The highest score is {highest_score} !!!")
+
+
+
+# # тренеровка
+#
+# highest_score = 0
+# for score in student_scores:
+#     if score > highest_score:
+#       highest_score = score
+# print(f"the highest score is: {highest_score}")

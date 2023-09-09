@@ -11,8 +11,9 @@ print(student_heights)
 # ЗАДАЧА: Необходимо вычислить средний рост ученика, опираясь на данные введённые пользователем
 
 # оптимальный путь: разделить сумму ростов студентов на обшее количество элементов списка(количество студентов)
-average = sum(student_heights) // len(student_heights)
-print(average)
+# average = sum(student_heights) // len(student_heights)
+# print(average)
+
 
 # путь с использованием циклов:
 
@@ -33,3 +34,18 @@ print(round(total_height / length_of_list))
 # for student in student_heights
 #   или
 # for height in student_heights
+
+
+# # тренеровка:
+# heights_len = 0
+# for pozitsia in student_heights:
+#   heights_len +=1
+# print(heights_len)
+#
+# heights_sum = 0
+# for student_height in student_heights:
+#   heights_sum = student_height + heights_sum
+# print(heights_sum)
+#
+# average = round(heights_sum / heights_len)
+# print(average)
