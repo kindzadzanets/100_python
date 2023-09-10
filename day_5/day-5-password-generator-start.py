@@ -38,3 +38,35 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 
 #Hard Level - Order of characters randomised:
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
+
+# SOLUTION:
+
+gr_letters = ""
+for repeat in range(0, nr_letters):
+	random_letter = letters[random.randint(0, len(letters) - 1)]
+	gr_letters = random_letter + gr_letters
+# print(gr_letters)
+
+gr_symbols = ""
+for symbol in range(0, nr_symbols):
+	random_symbol = symbols[random.randint(0, len(symbols) - 1)]
+	gr_symbols = random_symbol + gr_symbols
+# print(gr_symbols)
+
+gr_numbers = ""
+for number in range(0, nr_numbers):
+	random_number = numbers[random.randint(0, len(numbers) - 1)]
+	gr_numbers = str(random_number) + gr_numbers
+# print(gr_numbers)
+
+password_simple = gr_letters + gr_symbols + gr_numbers
+print(password_simple)
+
+password_list = list(password_simple)
+random.shuffle(password_list)
+# print(password_list)
+
+password_hard = ""
+for element in password_list:
+	password_hard = element + password_hard
+print(password_hard)
