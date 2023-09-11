@@ -92,7 +92,7 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 # print(password)
 
 
-# идефльное решение:
+# идеaльное решение:
 
 password_list = []
 for znak in range(0, nr_letters):
