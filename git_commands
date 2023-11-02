@@ -1,8 +1,7 @@
 git commit - create a commit with lost added uncommited changes.
 	-m "" - add the "commit message".
 	-a - add and commit all changed tracked files in one time.
-	-- amend - just add changes in last commit's info or => git add - for adding new other changes 
-in current commit.
+	-- amend - just add changes in last commit's info or => git add - for adding new other changes in current commit.
 	 --include [file_name] - make a commit only for [file_name]
 
 git add [file_name] - add an untracked or changed files (add to git system).
@@ -71,5 +70,5 @@ git grep [string] - search in hole project.
 	-i - case-insensitive search (независимо от регистра). 
 	-n - result + file's string number.
 
-git congig -e - edit config of current project [.git/config]
+git config -e - edit config of current project [.git/config]
 	 --global - main config, which contains general preferences [~/.gitconfig].
