@@ -12,3 +12,4 @@ Conflict from origin
 usfull commands list:
 
 git diff - shows all uncommited  changes
+check from linux
