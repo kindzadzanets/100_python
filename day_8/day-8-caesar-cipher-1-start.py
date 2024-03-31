@@ -1,12 +1,13 @@
 alphabet = ['а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я']
+
 # alphabet.index("э") получить позицию элемента списка
 # print(len(alphabet)) = 33
 # print(alphabet[-32])
 
 
-direction = input("Напиши 'encode' что бы закодировать, напиши 'decode' что бы декодировать:\n")
-text = input("Ваше сообщение:\n").lower()
-shift = int(input("Количество символов сдвига:\n"))
+# direction = input("Напиши 'encode' что бы закодировать, напиши 'decode' что бы декодировать:\n")
+# text = input("Ваше сообщение:\n").lower()
+# shift = int(input("Количество символов сдвига:\n"))
 
 
 #TODO-1: Create a function called 'encrypt' that takes the 'text' and 'shift' as inputs.
@@ -58,21 +59,76 @@ shift = int(input("Количество символов сдвига:\n"))
 
 
 # результат трудов:
-def crypto(text, shift, direction):
-	crypted_text = ""
-	for char in text:
-		if char in alphabet:
-			if direction == "encode":
+def caesar_cipher(text, shift, direction):
+	if direction not in ["encode", "decode"]:
+		print('Эй, здесь только два варианта: "encode" и "decode". Попробуй ещё раз!')
+	else:
+		crypted_text = ""
+		if direction == "decode":
+			shift *= -1
+		for char in text:
+			if char in alphabet:
 				shifted_index = alphabet.index(char) + shift
-			elif direction == "decode":
-				shifted_index = alphabet.index(char) - shift
+				shifted_char = alphabet[shifted_index % len(alphabet)]
+				crypted_text += shifted_char
 			else:
-				print("Here only two options: 'encode' or 'decode'. Try again!")
-				return
-			shifted_char = alphabet[shifted_index % len(alphabet)]
-			crypted_text += shifted_char
-		else:
-			crypted_text += char
-	print(crypted_text)
+				crypted_text += char
+		print(crypted_text)
 
-crypto(text,shift, direction)
+run = True
+while run:
+	direction = input("Напиши 'encode' что бы закодировать, напиши 'decode' что бы декодировать:\n")
+	text = input("Ваше сообщение:\n").lower()
+	shift = int(input("Количество символов сдвига:\n"))
+	caesar_cipher(text, shift, direction)
+	answer = input("Хочешь пошифровать ещё?\nда\нет: ").lower()
+	if answer == "нет":
+		run = False
+		print("До новых встреч!")
+
+
+# вариант от чатаГПТ(хорош):
+#
+# def get_direction():
+#     while True:
+#         direction = input("Напиши 'encode' что бы закодировать, напиши 'decode' что бы декодировать:\n").lower()
+#         if direction in ["encode", "decode"]:
+#             return direction
+#         print('Эй, здесь только два варианта: "encode" и "decode". Попробуй ещё раз!')
+#
+# def get_text():
+#     return input("Ваше сообщение:\n").lower()
+#
+# def get_shift():
+#     while True:
+#         try:
+#             return int(input("Количество символов сдвига:\n"))
+#         except ValueError:
+#             print('Сдвиг должен быть целым числом. Попробуй ещё раз!')
+#
+# def process_text(text, shift, direction):
+#     crypted_text = ""
+#     if direction == "decode":
+#         shift *= -1
+#     for char in text:
+#         if char in alphabet:
+#             shifted_index = alphabet.index(char) + shift
+#             shifted_char = alphabet[shifted_index % len(alphabet)]
+#             crypted_text += shifted_char
+#         else:
+#             crypted_text += char
+#     return crypted_text
+#
+# def caesar_cipher():
+#     direction = get_direction()
+#     text = get_text()
+#     shift = get_shift()
+#     crypted_text = process_text(text, shift, direction)
+#     print(crypted_text)
+#
+# while True:
+#     caesar_cipher()
+#     answer = input("Хочешь пошифровать ещё?\nда\нет: ").lower()
+#     if answer == "нет":
+#         print("До новых встреч!")
+#         break
