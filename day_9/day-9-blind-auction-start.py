@@ -1,5 +1,3 @@
-import pyautogui
-import time
 
 bidders = {}
 
@@ -17,18 +15,17 @@ def winner_is():
 		if bidders[key] > top_bid:
 			top_bid = bidders[key]
 			winner = key
-	return winner, top_bid
 	print(f"Победителем аукциона становится {winner} со ставкой {top_bid}$!!!")
-
-
-
+	return winner, top_bid
 
 
 def one_more_bid():
-	answer = input("Есть ли ещё желающие?\nда\нет: ").lower()
-	while answer == "да":
-		add_bid()
-		one_more_bid()
+	while True:
+		answer = input("Есть ли ещё желающие?\nда\нет: ").lower()
+		if answer == "да":
+			add_bid()
+		else:
+			break
 	winner_is()
 
 add_bid()
