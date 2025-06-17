@@ -41,4 +41,3 @@ if "_" not in display:
 	print("\nМОЛОДЕЦ!!! Ты спас висельника!")
 else:
 	print("\nПОВЕШЕН! это было слово: " + chosen_word)
-

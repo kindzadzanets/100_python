@@ -14,3 +14,12 @@ for even2 in range(1, 101):
 	if even2 % 2 == 0:
 		total2 += even2
 print(total2)
+
+
+total = 0
+for n in range(0, 101):
+	total += n
+	print(total)
+print(total)
+
+
