@@ -1,59 +1,46 @@
+
 def add(n1, n2):
-	return n1 + n2
+    return n1 + n2
 
 
 def subtract(n1, n2):
-	return n1 - n2
+    return n1 - n2
 
 
 def multiply(n1, n2):
-	return n1 * n2
+    return n1 * n2
 
 
 def divide(n1, n2):
-	if n1 is None or n2 is None:
-		return 0
-	else:
-		return n1 / n2
+    if n1 is None or n2 is None:
+        return 0
+    else:
+        return n1 / n2
+    
 
-
-def set_operator():
-	while True:
-		for key in operations:
-			print(key)
-		choice = input(f"Выберите оператор:\n")
-		if choice in operations:
-			return choice
-		else:
-			print("Выбери символ из перечисленных выше:")
-
-
-operations = {
-	"+": add,
-	"-": subtract,
-	"*": multiply,
-	"/": divide,
+operators = {
+    "+": add,
+    "-": subtract,
+    "*": multiply,
+    "/": divide
 }
 
-num1 = float(input("Укажите первое число:\n"))
-num2 = float(input("Укажите второе число:\n"))
-operator = set_operator()
-set_function = operations[operator]
-first_result = set_function(num1, num2)
+def calculator():
+    n1 = float(input("Set the first number:\n"))
+    next = True
 
-print(f"Результат: {num1} {operator} {num2} = {first_result}")
-
-proceed = "да"  # Устанавливаем начальное значение для продолжения цикла
-while proceed == "да":
-	operator = set_operator()
-	set_function = operations[operator]
-	num3 = float(input("Укажите новое число:\n"))
-	result = set_function(first_result, num3)
-	print(f"{first_result} {operator} {num3} = {result}")
-	first_result = result
-
-	proceed = input(f"Желаете ли выполнить ещё одно действие с {result}?\nда\нет: ").lower()
-
-print("Спасибо, что воспользовались этим шлаком!")
-
-
+    while next:
+        operator = input("Set the action: \n")
+        n2 = float(input("Set the second number:\n"))
+        result = operators[operator](n1, n2)
+        print(f"{n1} {operator} {n2} = {result}")
+        next = input("Would you like to make operation with result? y or n :\n").lower()
+        if next == "y":
+            n1 = result
+        else:
+            next = False
+            print("\n" * 5)
+            calculator()
+            
+calculator()
+        
