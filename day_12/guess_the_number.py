@@ -1,3 +1,5 @@
+# Моя полностью рабочая версия
+
 # import random
 
 # def thinking_number():
