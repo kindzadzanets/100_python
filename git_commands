@@ -1,0 +1,74 @@
+git commit - create a commit with lost added uncommited changes.
+	-m "" - add the "commit message".
+	-a - add and commit all changed tracked files in one time.
+	-- amend - just add changes in last commit's info or => git add - for adding new other changes in current commit.
+	 --include [file_name] - make a commit only for [file_name]
+
+git add [file_name] - add an untracked or changed files (add to git system).
+	[.] - add all untracked files.
+
+git reset HEAD~[1](2,3,4...) - disassembling(deleting) of last [1] or several  commits in current 
+branch.
+	--hard - disassembling last commit(s) and full deleting of changes corespoded to this commit.
+	HEAD [file_name] - set a file as untracked.
+	HEAD [.] - untrack all last added files.
+
+git diff - shows all last uncommited changes in branch.
+	>> [name].patch - add command result to a new patch file.
+
+git status - shows current state of local git repository.
+
+git push - upload local commited changes to origin branch on server.
+	-u origin(or other remote_branch_name) [local_branch_name] - same 
+as "--set ustream [remote_branch_name] [local_branch_name]". Creates same branch on server and links 
+current new_local_branch to a new_remote_branch on the server. Создаётся ветка на сервере и ассоциация 
+текущей новой ветки с ней.
+	origin :[remote_branch_name] - delete remote branch from server.
+
+git pull - download and merge actual version of remote origin branch to local branch.
+	origin :[remote_branch_name] - ???NEED TO RESEARCH??.
+
+git fetch - receive info about current state of remote origin branch (dont use before push - can 
+change commit's hash).
+	origin [remote_branch_name]- download remote branch from server to local repository. For displaying 
+new dowloaded branch into the list, use git switch to that branch.
+
+git merge [other_branch_name] - merge other branch into a current branch.
+	--abort - for merge's canceling.
+ 
+git log - info about all  commits for current version repository.
+	--author [author's name] - filter by author.
+
+git show - show full info of last commit 
+	[commit's hash] - full info about commit and coresponed changes.
+
+git blame - show files's rows changes .
+	| grep [any parametr] - filter by..
+
+git checkout [file_name(or)dir_name(or).] - cancell all last uncommited 
+changes for file [name] or for hole  directory [.].
+
+git stash - save+hide last uncommited changes.
+	pop - restore hided changes.
+	clear - erase hided+saved changes.
+
+git apply [file_name] - apply patch from file.
+
+git branch - show branches list with marked  current brunch.
+	[new_branch_name] - create new branch.
+	-m [branch_name] [new_name] - branch rename.
+
+git switch [branch_name] - set the [branch_name] as current.
+
+git clean -f - delete all untracked files in the directory.
+
+git reflog - show short-info full table of actions.
+
+git grep [string] - search in hole project.
+	-c - count of results.
+	-e [string] -e [string] - search several values.
+	-i - case-insensitive search (независимо от регистра). 
+	-n - result + file's string number.
+
+git config -e - edit config of current project [.git/config]
+	 --global - main config, which contains general preferences [~/.gitconfig].
